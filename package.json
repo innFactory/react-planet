@@ -1,0 +1,84 @@
+{
+	"name": "react-planet",
+	"version": "1.0.0",
+	"description": "A react lib for building circular menus in a very easy and handy way.",
+	"author": "innFactory",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/innFactory/react-planet"
+	},
+	"keywords": [
+		"react-planet",
+		"planet",
+		"planet-menu",
+		"circular",
+		"round",
+		"circular-menu",
+		"menu",
+		"submenu"
+	],
+	"main": "dist/index.js",
+	"module": "dist/index.es.js",
+	"jsnext:main": "dist/index.es.js",
+	"engines": {
+		"node": ">=8",
+		"npm": ">=5"
+	},
+	"scripts": {
+		"test": "cross-env CI=1 react-scripts-ts test --env=jsdom",
+		"test:watch": "react-scripts-ts test --env=jsdom",
+		"build": "rollup -c",
+		"start": "start-storybook -p 9001 -c .storybook -s ./src/stories/public",
+		"prepare": "npm run build",
+		"predeploy": "npm install && npm run build",
+		"deploy": "storybook-to-ghpages",
+		"storybook": "npm start",
+		"build-storybook": "build-storybook"
+	},
+	"dependencies": {
+		"@material-ui/core": "4.9.12",
+		"@material-ui/styles": "^4.9.10",
+		"react-spring": "^8.0.27",
+		"react-use-gesture": "^7.0.15"
+	},
+	"peerDependencies": {
+		"react": ">=16.12.0",
+		"react-dom": ">=16.12.0"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.7.7",
+		"@material-ui/icons": "4.9.1",
+		"@storybook/addon-actions": "^5.3.9",
+		"@storybook/addon-knobs": "^5.3.17",
+		"@storybook/addon-links": "^5.3.9",
+		"@storybook/addon-viewport": "^5.3.17",
+		"@storybook/react": "^5.2.8",
+		"@storybook/storybook-deployer": "^2.8.5",
+		"@testing-library/jest-dom": "^4.2.4",
+		"@testing-library/react": "^9.4.0",
+		"@types/classnames": "2.2.7",
+		"@types/jest": "^24.0.24",
+		"@types/react": "16.9.19",
+		"@types/react-dom": "16.9.5",
+		"@types/react-motion": "0.0.29",
+		"@types/react-virtualized": "9.18.11",
+		"awesome-typescript-loader": "^5.2.1",
+		"babel-loader": "^8.0.6",
+		"jest": "^24.9.0",
+		"prettier": "2.0.2",
+		"react": "16.12.0",
+		"react-dom": "16.12.0",
+		"react-easy-crop": "2.1.1",
+		"rollup": "^1.27.13",
+		"rollup-plugin-commonjs": "^10.1.0",
+		"rollup-plugin-node-resolve": "^5.2.0",
+		"rollup-plugin-peer-deps-external": "^2.2.0",
+		"rollup-plugin-typescript2": "^0.25.3",
+		"ts-jest": "^24.2.0",
+		"typescript": "3.7.5"
+	},
+	"files": [
+		"dist"
+	]
+}
