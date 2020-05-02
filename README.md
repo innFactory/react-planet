@@ -25,43 +25,42 @@ npm install --save react-planet
 <img src="doc/example1.png" width="40%">
 
 ```jsx
-import { Planet } from 'react-planet;
+import { Planet } from 'react-planet';
 
 export function MyPlanet() {
-
-    return (
-        <Planet
-                centerContent={
-                    <div
-                        style={{
-                            height: 100,
-                            width: 100,
-                            borderRadius: '50%',
-                            backgroundColor: '#1da8a4',
-                        }}
-                    />
-                }
-                open
-                autoClose
-        >
-                <div
-                    style={{
-                        height: 70,
-                        width: 70,
-                        borderRadius: '50%',
-                        backgroundColor: '#9257ad',
-                    }}
-                />
-                <div
-                    style={{
-                        height: 70,
-                        width: 70,
-                        borderRadius: '50%',
-                        backgroundColor: '#9257ad',
-                    }}
-                />
-        </Planet>
-    );
+	return (
+		<Planet
+			centerContent={
+				<div
+					style={{
+						height: 100,
+						width: 100,
+						borderRadius: '50%',
+						backgroundColor: '#1da8a4',
+					}}
+				/>
+			}
+			open
+			autoClose
+		>
+			<div
+				style={{
+					height: 70,
+					width: 70,
+					borderRadius: '50%',
+					backgroundColor: '#9257ad',
+				}}
+			/>
+			<div
+				style={{
+					height: 70,
+					width: 70,
+					borderRadius: '50%',
+					backgroundColor: '#9257ad',
+				}}
+			/>
+		</Planet>
+	);
 }
 ```
 
@@ -129,7 +128,7 @@ Nested planets
 
 Code: [/src/stories/Planet.stories.tsx](/src/stories/Planet.stories.tsx)
 
-## Face the space
+## Fake the space
 
 <img src="doc/react-planet_space.gif" width="30%">
 
