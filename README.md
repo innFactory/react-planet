@@ -10,6 +10,8 @@ A react lib for building circular menus in a very easy and handy way.
 
 Live-Demo: [STORYBOOK](https://innfactory.github.io/react-planet)
 
+Read the full story @ [Medium](https://medium.com/@innFactory/creating-circular-menus-with-react-planet-8c7c9df6d766) or [innFactory-Blog](https://innfactory.de/softwareentwicklung/ui-ux/creating-circular-menus-with-react-planet/)
+
 ## install
 
 ```
