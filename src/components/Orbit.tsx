@@ -2,7 +2,7 @@
 import { makeStyles } from '@material-ui/core';
 import { CreateCSSProperties, CSSProperties } from '@material-ui/styles';
 import * as React from 'react';
-import { animated, useSpring } from 'react-spring';
+import { animated, useSpring } from 'react-spring/web.cjs';
 
 interface Props {
 	orbitStyle?: (defaultStyle: CSSProperties | CreateCSSProperties<{}>) => CSSProperties | CreateCSSProperties<{}>;

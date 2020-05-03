@@ -2,7 +2,7 @@
 import { makeStyles } from '@material-ui/core';
 import * as React from 'react';
 import { useLayoutEffect, useRef } from 'react';
-import { animated, useSpring } from 'react-spring';
+import { animated, useSpring } from 'react-spring/web.cjs';
 import { DragableContainer } from './DragableContainer';
 
 interface Props {
