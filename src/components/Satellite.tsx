@@ -57,7 +57,7 @@ export function Satellite(props: Props) {
 			rotation,
 			orientation
 		),
-		config: { mass, tension, friction },
+		config: { mass, tension, friction, clamp: true },
 	});
 
 	useLayoutEffect(() => {
