@@ -1,4 +1,5 @@
-import { createMuiTheme, CssBaseline, MuiThemeProvider } from '@material-ui/core';
+import { createMuiTheme, CssBaseline } from '@material-ui/core';
+import { ThemeProvider } from '@material-ui/styles';
 import * as React from 'react';
 import { scale } from './storybook_utils.tsx/utils';
 
@@ -23,10 +24,10 @@ const theme = createMuiTheme({
 });
 export const withTheme = (component: any) => {
 	return (
-		<MuiThemeProvider theme={theme}>
+		<ThemeProvider theme={theme}>
 			{/* Reboot kickstart an elegant, consistent, and simple baseline to build upon. */}
 			<CssBaseline />
 			{component}
-		</MuiThemeProvider>
+		</ThemeProvider>
 	);
 };
