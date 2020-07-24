@@ -104,6 +104,7 @@ export function Planet(props: Props) {
   });
 
   const onPlanet = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    console.log("onPlanet");
     if (onClick) {
       onClick(e);
     } else {
