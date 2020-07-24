@@ -40,7 +40,8 @@
 		"@material-ui/core": "4.9.12",
 		"@material-ui/styles": "^4.9.10",
 		"react-spring": "^8.0.27",
-		"react-use-gesture": "^7.0.15"
+		"react-use-gesture": "^7.0.15",
+		"use-resize-observer": "^6.1.0"
 	},
 	"peerDependencies": {
 		"react": ">=16.12.0",

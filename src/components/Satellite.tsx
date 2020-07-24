@@ -1,8 +1,8 @@
 // prettier-ignore
 import { makeStyles } from '@material-ui/core';
 import * as React from "react";
-import { useLayoutEffect, useRef } from "react";
 import { animated, useSpring } from "react-spring";
+import useResizeObserver from "use-resize-observer";
 import { DragableContainer } from "./DragableContainer";
 
 interface Props {
@@ -40,9 +40,7 @@ export function Satellite(props: Props) {
     orientation,
   } = props;
   const classes = useStyles(props);
-  const targetRef = useRef<any>();
-  const [width, setWidth] = React.useState(0);
-  const [height, setHeight] = React.useState(0);
+  const { ref, height = 0, width = 0 } = useResizeObserver();
   const position = useSpring({
     reverse: !open,
     from: getInitalSatellitePosition(width, height, planetWidth, planetHeight),
@@ -57,15 +55,8 @@ export function Satellite(props: Props) {
       rotation,
       orientation
     ),
-    config: { mass, tension, friction, clamp: true },
+    config: { mass, tension, friction },
   });
-
-  useLayoutEffect(() => {
-    if (targetRef && targetRef.current) {
-      setWidth(targetRef.current.offsetWidth);
-      setHeight(targetRef.current.offsetHeight);
-    }
-  }, [targetRef]);
 
   return (
     <animated.div className={classes.root} style={position}>
@@ -74,7 +65,7 @@ export function Satellite(props: Props) {
         dragRadius={dragRadius}
         dragable={dragable}
       >
-        <div ref={targetRef}>{children}</div>
+        <div ref={ref as any}>{children}</div>
       </DragableContainer>
     </animated.div>
   );

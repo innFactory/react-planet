@@ -2,7 +2,8 @@
 import { ClickAwayListener, makeStyles } from '@material-ui/core';
 import { CreateCSSProperties, CSSProperties } from "@material-ui/styles";
 import * as React from "react";
-import { ReactElement, useLayoutEffect, useRef } from "react";
+import { ReactElement } from "react";
+import useResizeObserver from "use-resize-observer";
 import { DragableContainer } from "./DragableContainer";
 import { Orbit } from "./Orbit";
 import { Satellite } from "./Satellite";
@@ -70,21 +71,12 @@ export function Planet(props: Props) {
     satelliteOrientation,
   } = props;
   const classes = useStyles(props);
-  const targetRef = useRef<any>();
-  const [width, setWidth] = React.useState(0);
-  const [height, setHeight] = React.useState(0);
+  const { ref, height = 0, width = 0 } = useResizeObserver();
   const [_open, setOpen] = React.useState(!!open);
 
   React.useEffect(() => {
     setOpen(!!open);
   }, [open]);
-
-  useLayoutEffect(() => {
-    if (targetRef && targetRef.current) {
-      setWidth(targetRef.current.offsetWidth);
-      setHeight(targetRef.current.offsetHeight);
-    }
-  }, [targetRef]);
 
   var satellites: ReactElement<any>[] = [];
   var satelliteCount = React.Children.count(children);
@@ -165,7 +157,7 @@ export function Planet(props: Props) {
             bounceOnClose={(bounce && !!!bounceOnOpen) || bounceOnClose}
             bounceDirection={bounceDirection}
           >
-            <div ref={targetRef}>{centerContent}</div>
+            <div ref={ref as any}>{centerContent}</div>
           </DragableContainer>
         </div>
       </div>
