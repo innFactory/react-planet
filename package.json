@@ -1,6 +1,6 @@
 {
 	"name": "react-planet",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A react lib for building circular menus in a very easy and handy way.",
 	"author": "innFactory",
 	"license": "MIT",
