@@ -3,7 +3,7 @@ import { ClickAwayListener, makeStyles } from '@material-ui/core';
 import { CreateCSSProperties, CSSProperties } from "@material-ui/styles";
 import * as React from "react";
 import { ReactElement } from "react";
-import useResizeObserver from "use-resize-observer";
+import useResizeObserver from "use-resize-observer/polyfilled";
 import { DragableContainer } from "./DragableContainer";
 import { Orbit } from "./Orbit";
 import { Satellite } from "./Satellite";

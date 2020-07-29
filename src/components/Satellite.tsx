@@ -2,7 +2,7 @@
 import { makeStyles } from '@material-ui/core';
 import * as React from "react";
 import { animated, useSpring } from "react-spring/web.cjs";
-import useResizeObserver from "use-resize-observer";
+import useResizeObserver from "use-resize-observer/polyfilled";
 import { DragableContainer } from "./DragableContainer";
 
 interface Props {
