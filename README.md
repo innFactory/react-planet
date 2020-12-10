@@ -128,7 +128,7 @@ Nested planets
 
 <img src="doc/react-planet_planetception.gif" width="60%">
 
-Code: [/src/stories/Planet.stories.tsx](/src/stories/Planet.stories.tsx)
+Code: [/src/stories/Planetception.stories.tsx](/src/stories/Planetception.stories.tsx)
 
 ## Fake the space
 
