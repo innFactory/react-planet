@@ -30,39 +30,39 @@ npm install --save react-planet
 import { Planet } from 'react-planet';
 
 export function MyPlanet() {
-	return (
-		<Planet
-			centerContent={
-				<div
-					style={{
-						height: 100,
-						width: 100,
-						borderRadius: '50%',
-						backgroundColor: '#1da8a4',
-					}}
-				/>
-			}
-			open
-			autoClose
-		>
-			<div
-				style={{
-					height: 70,
-					width: 70,
-					borderRadius: '50%',
-					backgroundColor: '#9257ad',
-				}}
-			/>
-			<div
-				style={{
-					height: 70,
-					width: 70,
-					borderRadius: '50%',
-					backgroundColor: '#9257ad',
-				}}
-			/>
-		</Planet>
-	);
+  return (
+    <Planet
+      centerContent={
+        <div
+          style={{
+            height: 100,
+            width: 100,
+            borderRadius: '50%',
+            backgroundColor: '#1da8a4',
+          }}
+        />
+      }
+      open
+      autoClose
+    >
+      <div
+        style={{
+          height: 70,
+          width: 70,
+          borderRadius: '50%',
+          backgroundColor: '#9257ad',
+        }}
+      />
+      <div
+        style={{
+          height: 70,
+          width: 70,
+          borderRadius: '50%',
+          backgroundColor: '#9257ad',
+        }}
+      />
+    </Planet>
+  );
 }
 ```
 
@@ -71,11 +71,12 @@ export function MyPlanet() {
 <img src="doc/example2.png" width="40%">
 
 ```jsx
-<Planet centerContent={div style={...yourStlye}/>}
-        open
-        orbitRadius={120}
-        rotation={30}
-        ...
+<Planet
+	centerContent={<div style={yourStyle} />}
+	open
+	orbitRadius={120}
+	rotation={30}
+	...
 >
 ```
 
@@ -106,8 +107,8 @@ export function MyPlanet() {
 
 ```jsx
 <Planet
-    // set one of the orientations
-    satelliteOrientation="INSIDE"
+	// set one of the orientations
+	satelliteOrientation="INSIDE"
 
 ```
 
@@ -117,9 +118,9 @@ export function MyPlanet() {
 
 ```jsx
 <Planet
-    dragablePlanet
-    dragRadiusPlanet={20}
-    bounce
+	dragablePlanet
+	dragRadiusPlanet={20}
+	bounce
 ```
 
 ## Planetception
@@ -162,10 +163,9 @@ Code: [/src/stories/Planetception.stories.tsx](/src/stories/Planetception.storie
 
 ```jsx
 <Planet
-      mass={4}
-      tension={500}
-      friction={19}
-
+	mass={4}
+	tension={500}
+	friction={19}
 ```
 
 <br/>
