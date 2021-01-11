@@ -72,9 +72,9 @@ export function MyPlanet() {
 
 ```jsx
 <Planet
-	centerContent={<div style={yourStyle} />}
-	open
-	orbitRadius={120}
+  centerContent={<div style={yourStyle} />}
+  open
+  orbitRadius={120}
 	rotation={30}
 	...
 >
@@ -86,18 +86,18 @@ export function MyPlanet() {
 
 ```jsx
 <Planet
-	orbitStyle={(defaultStyle) => ({
-		...defaultStyle,
-		borderWidth: 4,
-		borderStyle: 'dashed',
-		borderColor: '#6f03fc',
-	})}
-	centerContent={<div className={classes.planetSmall} />}
-	open
+  orbitStyle={(defaultStyle) => ({
+    ...defaultStyle,
+    borderWidth: 4,
+    borderStyle: 'dashed',
+    borderColor: '#6f03fc',
+  })}
+  centerContent={<div className={classes.planetSmall} />}
+  open
 >
-	<div className={classes.satellite1} />
-	<div className={classes.satellite2} />
-	<div className={classes.satellite3} />
+  <div className={classes.satellite1} />
+  <div className={classes.satellite2} />
+  <div className={classes.satellite3} />
 </Planet>
 ```
 
@@ -107,9 +107,8 @@ export function MyPlanet() {
 
 ```jsx
 <Planet
-	// set one of the orientations
-	satelliteOrientation="INSIDE"
-
+  // set one of the orientations
+  satelliteOrientation="INSIDE"
 ```
 
 ## Bring it to life
@@ -118,9 +117,9 @@ export function MyPlanet() {
 
 ```jsx
 <Planet
-	dragablePlanet
-	dragRadiusPlanet={20}
-	bounce
+  dragablePlanet
+  dragRadiusPlanet={20}
+  bounce
 ```
 
 ## Planetception
@@ -137,23 +136,23 @@ Code: [/src/stories/Planetception.stories.tsx](/src/stories/Planetception.storie
 
 ```jsx
 <Planet
-	centerContent={<YourButton0 />}
-	hideOrbit
-	autoClose
-	orbitRadius={60}
-	bounceOnClose
-	rotation={105}
-	// the bounce direction is minimal visible
-	// but on close it seems the button wobbling a bit to the bottom
-	bounceDirection="BOTTOM"
+  centerContent={<YourButton0 />}
+  hideOrbit
+  autoClose
+  orbitRadius={60}
+  bounceOnClose
+  rotation={105}
+  // the bounce direction is minimal visible
+  // but on close it seems the button wobbling a bit to the bottom
+  bounceDirection="BOTTOM"
 >
-	<YourButton1 />
-	<YourButton2 />
-	<YourButton3 />
-	<div />
-	<div />
-	<div />
-	<div />
+  <YourButton1 />
+  <YourButton2 />
+  <YourButton3 />
+  <div />
+  <div />
+  <div />
+  <div />
 </Planet>
 ```
 
@@ -163,9 +162,9 @@ Code: [/src/stories/Planetception.stories.tsx](/src/stories/Planetception.storie
 
 ```jsx
 <Planet
-	mass={4}
-	tension={500}
-	friction={19}
+  mass={4}
+  tension={500}
+  friction={19}
 ```
 
 <br/>
