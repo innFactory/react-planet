@@ -75,8 +75,8 @@ export function MyPlanet() {
   centerContent={<div style={yourStyle} />}
   open
   orbitRadius={120}
-	rotation={30}
-	...
+  rotation={30}
+  ...
 >
 ```
 
